@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "articles#index"
   # Routes for the Like resource:
 
   # CREATE
