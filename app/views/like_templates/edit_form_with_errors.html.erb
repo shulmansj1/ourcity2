@@ -18,15 +18,6 @@
 <!-- Form like end -->
 
   <!-- Label and input for fan_id start -->
-  <div class="form-group">
-    <label for="fan_id">
-      Fan
-    </label>
-
-    <!-- Input for fan_id start -->
-    <%= select_tag(:fan_id, options_from_collection_for_select(User.all, :id, :email, @like.fan_id), :class => "form-control") %>
-    <!-- Input for fan_id end -->
-  </div>
   <!-- Label and input for fan_id end -->
 
   <!-- Label and input for article_id start -->
