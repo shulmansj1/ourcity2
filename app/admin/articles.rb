@@ -1,4 +1,6 @@
 ActiveAdmin.register Article do
+
+ permit_params :restaurant_yelp_id, :author_name, :city, :date_published, :image_address, :publication, :title, :webaddress
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
