@@ -1,0 +1,25 @@
+<!-- Form like start -->
+<form action="/create_like_from_article" method="post">
+<!-- Form like end -->
+
+  <!-- Label and input for fan_id start -->
+  <div class="form-group">
+    <label for="fan_id">
+      Fan
+    </label>
+
+    <!-- Input for fan_id start -->
+    <input type="text" id="fan_id" name="fan_id" class="form-control" value="<%= @like.fan_id %>">
+    <!-- Input for fan_id end -->
+  </div>
+  <!-- Label and input for fan_id end -->
+
+  <!-- Label and input for article_id start -->
+  <!-- Input for article_id start -->
+  <input type="hidden" name="article_id" value="<%= @article.id %>">
+  <!-- Input for article_id end -->
+
+  <button class="btn btn-block btn-outline-secondary">
+    Create like
+  </button>
+</form>

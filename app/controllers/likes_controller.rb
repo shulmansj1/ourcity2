@@ -32,6 +32,21 @@ class LikesController < ApplicationController
     end
   end
 
+  def create_row_from_article
+    @like = Like.new
+
+    @like.fan_id = params.fetch("fan_id")
+    @like.article_id = params.fetch("article_id")
+
+    if @like.valid?
+      @like.save
+
+      redirect_to("/articles/#{@like.article_id}", notice: "Like created successfully.")
+    else
+      render("like_templates/new_form_with_errors.html.erb")
+    end
+  end
+
   def edit_form
     @like = Like.find(params.fetch("prefill_with_id"))
 
