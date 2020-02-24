@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   # DELETE
   get("/delete_like/:id_to_remove", { :controller => "likes", :action => "destroy_row" })
+  get("/delete_like_from_article/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_article" })
+  get("/delete_like_from_fan/:id_to_remove", { :controller => "likes", :action => "destroy_row_from_fan" })
 
   #------------------------------
 
