@@ -10,28 +10,22 @@
   <ul class="list-group list-group-flush">
     <% @article.likes.each do |like| %>
       <li class="list-group-item d-flex align-items-center justify-content-between">
-        <!-- Show link start -->
         <a href="/likes/<%= like.id %>">
           <%= like.fan_id %>
         </a>
-        <!-- Show link end -->
 
-        <!-- Delete link start -->
         <%if current_user == like.fan %>
           <a href="/delete_like_from_article/<%= like.id %>">
             Delete
           </a>
         <% end %>
-        <!-- Delete link end -->
 
       </li>
     <% end %>
 
     <div class="card-footer">
       <div class="collapse" id="article_likes_new_form">
-        <!-- New associationcollection form start -->
         <%= render partial: "article_templates/article_likes_new_form" %>
-        <!-- New associationcollection form end -->
       </div>
     </div>
 

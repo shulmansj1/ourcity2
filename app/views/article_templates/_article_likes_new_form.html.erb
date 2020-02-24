@@ -1,17 +1,8 @@
-<!-- Form like start -->
 <form action="/create_like_from_article" method="post">
-<!-- Form like end -->
 
-  <!-- Label and input for fan_id start -->
-  <!-- Input for "fan_id" start -->
   <input type="hidden" name="fan_id" value="<%= current_user.id %>">
-  <!-- Input for "fan_id" end -->
-  <!-- Label and input for fan_id end -->
 
-  <!-- Label and input for article_id start -->
-  <!-- Input for article_id start -->
   <input type="hidden" name="article_id" value="<%= @article.id %>">
-  <!-- Input for article_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create like

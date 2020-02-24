@@ -11,121 +11,95 @@
         </a>
       </div>
 
-      <!-- Edit link article start -->
       <div class="col">
         <a href="/articles/<%= @article.id %>/edit" class="btn btn-block btn-outline-secondary">
           Edit article
         </a>
       </div>
-      <!-- Edit link article end -->
 
-      <!-- Delete link article start -->
       <div class="col">
         <a href="/delete_article/<%= @article.id %>" class="btn btn-block btn-outline-secondary">
           Delete article
         </a>
       </div>
-      <!-- Delete link article end -->
     </div>
 
     <dl>
       <dt>
         Restaurant yelp
       </dt>
-      <!-- Display restaurant_yelp_id start -->
       <dd>
         <%= @article.restaurant_yelp_id %>
       </dd>
-      <!-- Display restaurant_yelp_id end -->
 
       <dt>
         Author name
       </dt>
-      <!-- Display author_name start -->
       <dd>
         <%= @article.author_name %>
       </dd>
-      <!-- Display author_name end -->
 
       <dt>
         City
       </dt>
-      <!-- Display city start -->
       <dd>
         <%= @article.city %>
       </dd>
-      <!-- Display city end -->
 
       <dt>
         Date published
       </dt>
-      <!-- Display date_published start -->
       <dd>
         <%= @article.date_published %>
       </dd>
-      <!-- Display date_published end -->
 
       <dt>
         Image address
       </dt>
-      <!-- Display image_address start -->
       <dd>
         <%= @article.image_address %>
       </dd>
-      <!-- Display image_address end -->
 
       <dt>
         Publication
       </dt>
-      <!-- Display publication start -->
       <dd>
         <%= @article.publication %>
       </dd>
-      <!-- Display publication end -->
 
       <dt>
         Title
       </dt>
-      <!-- Display title start -->
       <dd>
         <%= @article.title %>
       </dd>
-      <!-- Display title end -->
 
       <dt>
         Webaddress
       </dt>
-      <!-- Display webaddress start -->
       <dd>
         <%= @article.webaddress %>
       </dd>
-      <!-- Display webaddress end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@article.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@article.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
 <div class="row mb-3">
   <div class="col-md-8 offset-md-2">
     <%= render partial: "article_templates/article_likes" %>
   </div>
 </div>
-<!-- Show Page Customization end -->
